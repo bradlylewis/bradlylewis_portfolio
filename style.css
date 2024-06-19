@@ -764,6 +764,25 @@ a {
   letter-spacing: 1px;
 }
 
+.contact__form-message-container {
+  position: relative;
+  height: 0;
+}
+
+.form-message {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  font-size: 1.6rem;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.form-message.visible {
+  opacity: 1;
+}
+
 /* Code for Modern Browsers */
 /* Code for WebKit, Blink, Edge */
 /* Code for Internet Explorer 10-11 */

@@ -77,7 +77,12 @@ smMenuCloseBtn.addEventListener('click', () => {
   smMenu.classList.remove('main-header__sm-menu--active')
 })
 
-
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 
 
@@ -111,9 +116,9 @@ const eventFire = (el, etype) => {
   }
 }
 
-themeColorSelector.addEventListener('click', () => {
-  eventFire(themeColorSelectorInput, 'input')
-})
+// themeColorSelector.addEventListener('click', () => {
+//   eventFire(themeColorSelectorInput, 'input')
+// })
 
 const setDynamicColor = (color) => {
 
@@ -123,9 +128,9 @@ const setDynamicColor = (color) => {
   //localStorage.setItem('color', color)
 }
 
-themeColorSelectorInput.addEventListener('input', (e) => {
-  setDynamicColor(e.target.value)
-})
+// themeColorSelectorInput.addEventListener('input', (e) => {
+//   setDynamicColor(e.target.value)
+// })
 
 // if (localStorage.getItem('color')) {
 //   let userSelectedColor = localStorage.getItem('color')
@@ -139,3 +144,32 @@ const headerLogoConatiner = document.querySelector('.main-header__logo-container
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+function showMessage(message, color = 'green') {
+  const messageDiv = document.getElementById("form-message");
+  messageDiv.innerText = message;
+  messageDiv.style.color = color;
+  messageDiv.classList.add("visible");
+
+  setTimeout(() => {
+    messageDiv.classList.remove('visible');
+  }, 5000);
+}
+
+function SendMail(event) {
+  event.preventDefault();
+  let params = {
+    from_name: document.getElementById("full_name").value,
+    email_id: document.getElementById("email_id").value,
+    message: document.getElementById("message").value,
+  }
+
+  emailjs.send('service_e8oct5a', 'template_b9if58v', params).then(
+    () => {
+      document.getElementById("contact-form").reset();
+      showMessage('Your message has been sent successfully!')
+    }, (error) => {
+      console.log('FAILED...', error);
+    },
+  )
+}

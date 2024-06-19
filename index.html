@@ -5,13 +5,22 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
-  <title>WowFolio - A Simple & Clean Portfolio Template For Developers</title>
-  <meta name="description" content="Wowfolio - A Simple & Clean Portfolio Template For Developers" />
+  <title>Bradly Lewis | Portfolio</title>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          emailjs.init({
+            publicKey: "xO9hnjAXRWZMkd21G",
+          });
+      })();
+  </script>
 </head>
 
 <body>
@@ -19,18 +28,16 @@
     <div class="main-header__logo-container">
       <div class="main-header__logo-img-cont">
         <img
-          src="https://d33wubrfki0l68.cloudfront.net/32c48e23e828c42a99a37db81e2a91d7c8eed4de/d134a/assets/png/ram-maheshwari.png"
+          src="assets/self_headshot.png"
           alt="logo Image" class="main-header__logo-img" />
       </div>
-      <h4 class="main-header__logo-text">John Anderson</h4>
+      <h4 class="main-header__logo-text">Bradly Lewis</h4>
     </div>
     <nav class="main-header__navigation">
       <ul class="main-header__navigation-links">
         <li class="main-header__navigation-link"><a href="./index.html"> Home </a></li>
         <li class="main-header__navigation-link"><a href="./index.html#about"> About </a></li>
-        <li class="main-header__navigation-link">
-          <a href="./index.html#projects"> Projects </a>
-        </li>
+        <li class="main-header__navigation-link"><a href="./index.html#projects"> Projects </a></li>
         <li class="main-header__navigation-link"><a href="./index.html#contact" href=""> Contact </a></li>
       </ul>
     </nav>
@@ -61,13 +68,15 @@
     <!-- <button class="btn btn-theme btn-sm">Download CV</button> -->
   </header>
 
+
   <!--Remove or Comment out this theme selector code when you are done with choosing the right color for your theme so this color selector don't appear when you host the site online-->
-  <div class="themeClrSelector">
+  <!-- <div class="themeClrSelector">
     <input placeholder="Color Selector" type="color" value="#1DA1F2" class="themeClrSelector__input" />
     <img alt="theme color tester" src="https://img.icons8.com/fluent/48/000000/rgb-circle-1.png"
-      class="themeClrSelector__img" />
+      class="themeClrSelector__img" /> -->
   </div>
   <!---->
+
 
   <section id="home-hero" class="home-hero">
     <div class="home-hero__content">
@@ -75,11 +84,11 @@
         <h1 class="heading-primary home-hero__heading-primary">
           <span class="heading-primary__sm"> Hello 👋</span>
           <span class="heading-primary__main">
-            I'm John Anderson! A Web Developer Building Awesome Webapps And Websites That Powers The Internet
+            I'm Bradly Lewis! A Software Developer Dedicated To Building Innovative Web Apps And Websites That Make A Meaningful Impact On The World
           </span>
         </h1>
-        <button class="btn btn-theme home-hero__btn-theme">Projects</button>
-        <button class="btn btn-inv home-hero__btn-theme">Contact</button>
+        <button onclick="scrollToSection('projects')" class="btn btn-theme home-hero__btn-theme">Projects</button>
+        <button onclick="scrollToSection('contact')" class="btn btn-inv home-hero__btn-theme">Contact</button>
       </div>
     </div>
   </section>
@@ -98,25 +107,21 @@
             </h3>
             <p class="text-primary about__text-primary">
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
+                What draws me to software development is that it can literally take you anywhere.
+                Software developers are needed in just about every industry. I also really like the people. Since it takes so 
+                long to become competent in development work, most of the people are extremely driven and thirsty for knowledge.
               </span>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
+                Over the years, I've been exposed to all sorts of technologies; some more than others. Without a doubt, I'm most 
+                skilled with JavaScript. I've used it the longest because it's been the most accesible to me. I've gotten to work 
+                with React, Angular, Vue, Node.js, Ember.js, Three.js, and many more libraries. I've also done a bit of AI/ML work 
+                using Python. I've worked on Frontend, Backend, Web, Mobile, Gaming Consoles and Software. I love to learn so I'm 
+                always setting aside time to learn things that maybe I don't have the opportunity to utilize at work. During my 
+                studies, I've learned a bit about Java, C#, Linux, Scripting and more.
               </span>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
+                Software development suits me because I like to create things, I'm good at problem-solving, I'm always 
+                trying to find ways to be more organized and I'm a people person. 
               </span>
             </p>
             <button class="btn btn-theme about__btn-theme">Projects</button>
@@ -131,16 +136,33 @@
               <li class="about__skill">javascript</li>
               <li class="about__skill">react</li>
               <li class="about__skill">node</li>
-              <li class="about__skill">git</li>
-              <li class="about__skill">vscode</li>
-              <li class="about__skill">linux</li>
-              <li class="about__skill">react</li>
-              <li class="about__skill">node</li>
-              <li class="about__skill">git</li>
-              <li class="about__skill">vscode</li>
-              <li class="about__skill">linux</li>
-              <li class="about__skill">javascript</li>
-              <li class="about__skill">react</li>
+              <li class="about__skill">redux</li>
+              <li class="about__skill">context api</li>
+              <li class="about__skill">sass</li>
+              <li class="about__skill">less</li>
+              <li class="about__skill">vue</li>
+              <li class="about__skill">web</li>
+              <li class="about__skill">mobile</li>
+              <li class="about__skill">angular</li>
+              <li class="about__skill">react native</li>
+              <li class="about__skill">graphql</li>
+              <li class="about__skill">sql</li>
+              <li class="about__skill">postman</li>
+              <li class="about__skill">postgresql</li>
+              <li class="about__skill">mongodb</li>
+              <li class="about__skill">typescript</li>
+              <li class="about__skill">xstate</li>
+              <li class="about__skill">AI/ML</li>
+              <li class="about__skill">pandas</li>
+              <li class="about__skill">matplotlib</li>
+              <li class="about__skill">okta</li>
+              <li class="about__skill">python</li>
+              <li class="about__skill">ember.js</li>
+              <li class="about__skill">three.js</li>
+              <li class="about__skill">ci/cd</li>
+              <li class="about__skill">java</li>
+              <li class="about__skill">c#</li>
+              <li class="about__skill">docker</li>
             </ul>
           </div>
         </div>
@@ -343,19 +365,21 @@
       </h2>
       <div class="main-section__content">
         <div class="contact__form-cont">
-          <form class="contact__form">
+          <form id="contact-form" onsubmit="SendMail(event)" class="contact__form">
             <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Name</label>
-              <input placeholder="Enter Your Name" type="text" class="contact__form-field-input" />
+              <label for="full_name" class="contact__form-field-label">Name</label>
+              <input placeholder="Enter Your Name" type="text" id="full_name" class="contact__form-field-input" required />
             </div>
             <div class="contact__form-field">
               <label for="name" class="contact__form-field-label">Email</label>
-              <input placeholder="Enter Your Email" type="text" class="contact__form-field-input" />
+              <input placeholder="Enter Your Email" type="email" id="email_id" class="contact__form-field-input" required />
             </div>
             <div class="contact__form-field">
               <label for="name" class="contact__form-field-label">Message</label>
-              <textarea placeholder="Enter Your Message" name="message" id="" cols="30" rows="10"
-                class="contact__form-field-input"></textarea>
+              <textarea placeholder="Enter Your Message" id="message" id="" cols="30" rows="10" class="contact__form-field-input" required></textarea>
+            </div>
+            <div class="contact__form-message-container">
+              <div id="form-message" class="form-message"></div>
             </div>
             <button type="submit" class="contact__form-submit">Submit</button>
           </form>
@@ -383,36 +407,26 @@
         </ul>
         <div class="main-footer__mid-line"></div>
         <div class="main-footer__socials">
-          <a href="#" class="main-footer__social-link">
+          <a href="https://github.com/bradlylewis" class="main-footer__social-link">
             <img
               src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
               alt="" class="main-footer__social-link-icon" />
           </a>
-          <a href="#" class="main-footer__social-link">
+          <a href="https://www.linkedin.com/in/bradly-lewis/" class="main-footer__social-link">
             <img src="./assets/icons8-instagram-48.png" alt="" class="main-footer__social-link-icon" />
           </a>
-          <a href="#" class="main-footer__social-link">
+          <a href="https://www.linkedin.com/in/bradly-lewis/" class="main-footer__social-link">
             <img src="./assets/icons8-twitter-50.png" alt="" class="main-footer__social-link-icon" />
           </a>
-          <a href="#" class="main-footer__social-link">
+          <a href="https://www.linkedin.com/in/bradly-lewis/" class="main-footer__social-link">
             <img
               src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
               alt="" class="main-footer__social-link-icon" />
           </a>
-          <a href="#" class="main-footer__social-link">
+          <a href="https://www.pinterest.com/blewis3615/" class="main-footer__social-link">
             <img src="./assets/icons8-pinterest-64.png" alt="" class="main-footer__social-link-icon" />
           </a>
         </div>
-      </div>
-    </div>
-    <div class="main-footer__bottom">
-      <div class="main-container">
-        <p class="main-footer__bottom-txt">
-          <!-- If you can give me some credits or shoutout here by linking to my website, then that will help me a lot :) -->
-          <a target="_blank" href="https://github.com/rammcodes/wowfolio">WowFolio</a> Open-Source Template
-          <script>document.write(new Date().getFullYear())</script>. Made by
-          <a target="_blank" href="https://rammaheshwari.com">Ram Maheshwari</a>
-        </p>
       </div>
     </div>
   </footer>
