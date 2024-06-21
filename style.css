@@ -128,7 +128,7 @@ a {
 
 @media (max-width: 37.5em) {
   .heading-primary {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -170,7 +170,7 @@ a {
 
 @media (max-width: 37.5em) {
   .heading-secondary {
-    font-size: 3.7rem;
+    font-size: 2.7rem;
   }
 
   .heading-tertiary {
@@ -236,6 +236,16 @@ a {
   overflow: hidden;
   border-radius: 10rem;
   background: rgba(var(--themeColor), 1);
+}
+
+@media (max-width: 37.5em) {
+  .download-cv {
+    display: none;
+  }
+
+  .main-header__sm-menu-links .download-cv-sm {
+    color: rgba(var(--themeColor), 1)
+  }
 }
 
 .main-header__sm-scr-nav-btn {
@@ -417,6 +427,7 @@ a {
   }
 
   .home-hero__content {
+    width: 80%;
     margin: 0 auto;
     padding: 15rem 0 10rem 0;
   }
@@ -432,7 +443,7 @@ a {
 
 @media (max-width: 37.5em) {
   .home-hero__heading-primary {
-    margin-bottom: 4.5rem;
+    margin-bottom: 10.5rem;
   }
 
   .home-hero__btn-theme,
@@ -487,6 +498,12 @@ a {
 .about__skills {
   display: flex;
   flex-wrap: wrap;
+}
+
+@media (max-width: 37.5em) {
+  .about__skills {
+    justify-content: center;
+  }
 }
 
 .about__skill {
